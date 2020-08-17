@@ -1,0 +1,10 @@
+//total time spent
+components + app structure 2hr
+add,delete functionality ,context,reducers 4hr
+api ,data propagation,testing 2hr
+css 0.5hr
+
+//~ 8-9hr total
+
+(if i had more time to spend i would use it on css,code cleanup and more features like:
+click on keyword div that opens up textbox where you can delete desired keywords)
