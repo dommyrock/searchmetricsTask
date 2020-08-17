@@ -1,3 +1,6 @@
+### App flow
+#### App -->graphql server -->API
+
 # Template: Simple GraphQL Server
 
 This template contains a folder with a very basic implementation of a GraphQL server (with Apollo).
