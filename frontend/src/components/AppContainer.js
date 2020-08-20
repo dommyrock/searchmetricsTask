@@ -5,8 +5,8 @@ import AppRow from "./AppRow";
 import { useQuery, useLazyQuery, gql } from "@apollo/client";
 
 const kewordsQuery = gql`
-  query testFetch2($keyword: String!, $max: Int!) {
-    data: testFetch2(keyword: $keyword, max: $max) {
+  query getKeywords($keyword: String!, $max: Int!) {
+    data: getKeywords(keyword: $keyword, max: $max) {
       word
     }
   }

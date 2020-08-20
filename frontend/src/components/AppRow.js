@@ -16,8 +16,7 @@ const AppRow = ({ data, deleteDispatch }) => {
   );
 };
 AppRow.propTypes = {
-  data: PropTypes.array,
-  // name: PropTypes.string, //.isRequired
-  // keywords: PropTypes.array,
+  data: PropTypes.object.isRequired,
+  deleteDispatch: PropTypes.func,
 };
 export default AppRow;

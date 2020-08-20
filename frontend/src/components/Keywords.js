@@ -35,6 +35,7 @@ const Keywords = ({ keywords, id }) => {
 };
 Keywords.propTypes = {
   keywords: PropTypes.array,
+  id: PropTypes.number,
 };
 
 export default Keywords;

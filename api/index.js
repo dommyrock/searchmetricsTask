@@ -3,6 +3,8 @@ const fetch = require("node-fetch");
 
 const API_URL = "https://api.datamuse.com/";
 //test https://api.datamuse.com/words?ml=programming&max=10
+
+//TODO: still need to add mutations , and move creating /updating data do BE
 const typeDefs = gql`
   type Keyword {
     word: String!
@@ -14,17 +16,9 @@ const typeDefs = gql`
     hello: String
     similarKeywords: [String!]
     testFetch: [Keyword]
-    testFetch2(keyword: String!, max: Int!): [Keyword]
+    getKeywords(keyword: String!, max: Int!): [Keyword]
   }
 `;
-/**
- * Client query 
- * query{
-  testFetch2(keyword:"programming",max:5){
-    word
-  }
-}
- */
 
 const resolvers = {
   Query: {
@@ -42,7 +36,7 @@ const resolvers = {
       const data = await response.json();
       return data;
     },
-    testFetch2: async (root, { keyword, max }) => {
+    getKeywords: async (root, { keyword, max }) => {
       const response = await fetch(`${API_URL}words?ml=${keyword}&max=${max}`);
       const data = await response.json();
       return data;
